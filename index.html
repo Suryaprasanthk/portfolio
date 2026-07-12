@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="K. Surya Prasanth – Full Stack Developer & AI Enthusiast. B.Tech CSE student building modern, user-friendly web applications." />
+  <meta name="keywords" content="Surya Prasanth, Full Stack Developer, AI Enthusiast, Portfolio, Web Developer, B.Tech CSE" />
+  <meta name="author" content="K. Surya Prasanth" />
+  <meta property="og:title" content="K. Surya Prasanth | Full Stack Developer & AI Enthusiast" />
+  <meta property="og:description" content="Personal portfolio of K. Surya Prasanth – Full Stack Developer & AI Enthusiast." />
+  <meta property="og:url" content="https://suryaprasanth.in" />
+  <title>K. Surya Prasanth | Full Stack Developer & AI Enthusiast</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION BAR
+       ============================================================ -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <!-- Logo / Brand -->
+      <a href="#home" class="nav-logo" id="nav-logo">
+        <span class="logo-bracket">&lt;</span>SP<span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home"           class="nav-link" data-section="home">Home</a></li>
+        <li><a href="#about"          class="nav-link" data-section="about">About</a></li>
+        <li><a href="#education"      class="nav-link" data-section="education">Education</a></li>
+        <li><a href="#skills"         class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#projects"       class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#certifications" class="nav-link" data-section="certifications">Certifications</a></li>
+        <li>
+          <!-- Resume opens PDF in new tab -->
+          <a href="assets/resume/resume.pdf" target="_blank" rel="noopener noreferrer"
+             class="nav-link nav-resume-btn" id="nav-resume-btn">
+            <i class="fas fa-file-alt"></i> Resume
+          </a>
+        </li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <!-- Right Controls -->
+      <div class="nav-controls">
+        <!-- Light / Dark Mode Toggle -->
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light/dark mode">
+          <i class="fas fa-moon" id="theme-icon"></i>
+        </button>
+        <!-- Hamburger (Mobile) -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO / HOME SECTION
+       ============================================================ -->
+  <section id="home" class="hero-section">
+    <div class="hero-bg-glow"></div>
+    <div class="hero-container">
+
+      <!-- Profile Photo -->
+      <div class="hero-photo-wrap reveal">
+        <div class="hero-photo-ring">
+          <img
+            src="assets/images/profile.jpg"
+            alt="K. Surya Prasanth – Full Stack Developer"
+            class="hero-photo"
+            id="hero-profile-photo"
+            loading="eager"
+          />
+        </div>
+
+      </div>
+
+      <!-- Hero Text -->
+      <div class="hero-text reveal">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">K. Surya Prasanth</h1>
+        <div class="hero-title-wrap">
+          <span class="hero-title-text" id="typed-title"></span>
+          <span class="typed-cursor">|</span>
+        </div>
+        <p class="hero-about">
+          B.Tech Computer Science student passionate about Full Stack Development,
+          Artificial Intelligence, and modern web technologies. I build clean,
+          user-friendly applications while continuously improving my skills.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="hero-cta">
+          <a href="assets/resume/resume.pdf" target="_blank" rel="noopener noreferrer"
+             class="btn btn-primary" id="hero-resume-btn">
+            <i class="fas fa-download"></i> Download Resume
+          </a>
+          <a href="#contact" class="btn btn-outline" id="hero-contact-btn">
+            <i class="fas fa-envelope"></i> Get In Touch
+          </a>
+        </div>
+
+        <!-- Social Links -->
+        <div class="hero-socials">
+          <a href="https://github.com/Suryaprasanthk" target="_blank" rel="noopener noreferrer"
+             class="social-link" aria-label="GitHub" id="social-github">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/surya-prasanth-kalabattula-416167338" target="_blank" rel="noopener noreferrer"
+             class="social-link" aria-label="LinkedIn" id="social-linkedin">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:kalabattulaprasanth@gmail.com"
+             class="social-link" aria-label="Email" id="social-email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Down Hint -->
+    <a href="#about" class="scroll-hint" aria-label="Scroll down">
+      <span></span><span></span>
+    </a>
+  </section>
+
+  <!-- ============================================================
+       ABOUT SECTION
+       ============================================================ -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Who I Am</span>
+        <h2 class="section-title">About Me</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="about-grid">
+        <!-- About Photo Side -->
+        <div class="about-photo-col reveal">
+          <div class="about-photo-frame">
+            <img src="assets/images/profile.jpg" alt="Surya Prasanth" class="about-photo" />
+            <div class="about-photo-deco"></div>
+          </div>
+        </div>
+
+        <!-- About Content Side -->
+        <div class="about-content-col reveal">
+          <h3 class="about-heading">Full Stack Developer &amp; AI Enthusiast</h3>
+          <p class="about-text">
+            I am a <strong>B.Tech Computer Science student</strong> at Sagi Ramakrishnam Raju
+            Engineering College, passionate about building impactful digital experiences. My
+            journey in tech is driven by curiosity — I love exploring the intersection of
+            creativity and engineering.
+          </p>
+          <p class="about-text">
+            I specialize in <strong>Full Stack Development</strong> and have a growing interest
+            in <strong>Artificial Intelligence</strong>. I enjoy building applications that are
+            both functional and aesthetically pleasing.
+          </p>
+          <p class="about-text">
+            When I'm not coding, I'm exploring new technologies, improving my problem-solving
+            skills, and working on projects that solve real-world problems.
+          </p>
+
+          <!-- Quick Info Cards -->
+          <div class="about-info-grid">
+            <div class="about-info-card">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <span class="info-label">Location</span>
+                <span class="info-value">Bhimavaram, Andhra Pradesh, India</span>
+              </div>
+            </div>
+            <div class="about-info-card">
+              <i class="fas fa-graduation-cap"></i>
+              <div>
+                <span class="info-label">Degree</span>
+                <span class="info-value">B.Tech CSE</span>
+              </div>
+            </div>
+            <div class="about-info-card">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <span class="info-label">Email</span>
+                <span class="info-value">kalabattulaprasanth@gmail.com</span>
+              </div>
+            </div>
+            <div class="about-info-card">
+              <i class="fas fa-globe"></i>
+              <div>
+                <span class="info-label">Website</span>
+                <span class="info-value">suryaprasanth.in</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EDUCATION SECTION
+       ============================================================ -->
+  <section id="education" class="section education-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Academic Journey</span>
+        <h2 class="section-title">Education</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="timeline reveal">
+        <!-- Education Card -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content education-card">
+            <div class="edu-card-header">
+              <div class="edu-icon">
+                <i class="fas fa-university"></i>
+              </div>
+              <div class="edu-meta">
+                <span class="edu-duration">
+                  <i class="fas fa-calendar-alt"></i> 2024 – 2028
+                </span>
+                <span class="edu-badge">Currently Enrolled</span>
+              </div>
+            </div>
+            <h3 class="edu-degree">B.Tech in Computer Science and Engineering</h3>
+            <p class="edu-college">Sagi Ramakrishnam Raju Engineering College</p>
+            <p class="edu-desc">
+              Pursuing a Bachelor of Technology in CSE with focus on software engineering,
+              algorithms, data structures, artificial intelligence, and modern web development.
+            </p>
+            <div class="edu-tags">
+              <span class="edu-tag">Computer Science</span>
+              <span class="edu-tag">Engineering</span>
+              <span class="edu-tag">Full Stack</span>
+              <span class="edu-tag">AI / ML</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SKILLS SECTION
+       ============================================================ -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">What I Know</span>
+        <h2 class="section-title">Skills</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="skills-grid">
+
+        <!-- Programming Languages -->
+        <div class="skill-category reveal">
+          <div class="skill-cat-header">
+            <i class="fas fa-code"></i>
+            <h3>Programming Languages</h3>
+          </div>
+          <div class="skill-pills">
+            <div class="skill-pill">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" />
+              C
+            </div>
+            <div class="skill-pill">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+              Python
+            </div>
+            <div class="skill-pill">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+              JavaScript
+            </div>
+            <div class="skill-pill">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" />
+              SQL
+            </div>
+          </div>
+        </div>
+
+        <!-- Web Technologies -->
+        <div class="skill-category reveal">
+          <div class="skill-cat-header">
+            <i class="fas fa-globe"></i>
+            <h3>Web Technologies</h3>
+          </div>
+          <div class="skill-pills">
+            <div class="skill-pill">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />
+              HTML5
+            </div>
+            <div class="skill-pill">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" />
+              CSS3
+            </div>
+            <div class="skill-pill">
+              <i class="fas fa-mobile-alt" style="font-size:1.4rem;color:#6c63ff;"></i>
+              Responsive Design
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-category reveal">
+          <div class="skill-cat-header">
+            <i class="fas fa-tools"></i>
+            <h3>Tools &amp; Platforms</h3>
+          </div>
+          <div class="skill-pills">
+            <div class="skill-pill">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" />
+              VS Code
+            </div>
+            <div class="skill-pill">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
+              Git
+            </div>
+            <div class="skill-pill">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" />
+              Figma
+            </div>
+            <div class="skill-pill">
+              <i class="fas fa-rocket" style="font-size:1.4rem;color:#6c63ff;"></i>
+              Antigravity
+            </div>
+            <div class="skill-pill">
+              <i class="fas fa-brain" style="font-size:1.4rem;color:#a78bfa;"></i>
+              Claude AI
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROJECTS SECTION
+       ============================================================ -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">My Work</span>
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">Here are some of the projects I've been working on.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- ─── PROJECT CARD 1 ───────────────────────────────────────
+             TO EDIT: Change title, description, tech stack, GitHub link, live demo
+             ─────────────────────────────────────────────────────────── -->
+        <div class="project-card reveal" id="project-card-1">
+          <div class="project-thumbnail" style="--thumb-color: #6c63ff;">
+            <i class="fas fa-laptop-code project-thumb-icon"></i>
+            <!-- REPLACE: <img src="assets/projects/project1.png" alt="Project 1" /> -->
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Project Title Here</h3><!-- EDIT: Project name -->
+            <p class="project-desc">A short and engaging description of what this project does and the problem it solves. Keep it clear and concise.</p><!-- EDIT: Description -->
+            <div class="project-tech-stack">
+              <span class="tech-badge">HTML</span><!-- EDIT: Tech stack badges -->
+              <span class="tech-badge">CSS</span>
+              <span class="tech-badge">JavaScript</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <button class="btn btn-view-project" onclick="openComingSoonModal()"
+                    aria-label="View Project 1" id="view-project-1">
+              <i class="fas fa-eye"></i> View Project
+            </button>
+            <!-- EDIT: Uncomment and fill these when ready
+            data-github="https://github.com/Suryaprasanthk/your-repo"
+            data-live="https://your-live-demo.com"
+            -->
+          </div>
+        </div>
+
+        <!-- ─── PROJECT CARD 2 ───────────────────────────────────────
+             TO EDIT: Change title, description, tech stack, GitHub link, live demo
+             ─────────────────────────────────────────────────────────── -->
+        <div class="project-card reveal" id="project-card-2">
+          <div class="project-thumbnail" style="--thumb-color: #10b981;">
+            <i class="fas fa-robot project-thumb-icon"></i>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Project Title Here</h3><!-- EDIT: Project name -->
+            <p class="project-desc">A short and engaging description of what this project does and the problem it solves. Keep it clear and concise.</p><!-- EDIT: Description -->
+            <div class="project-tech-stack">
+              <span class="tech-badge">Python</span><!-- EDIT: Tech stack badges -->
+              <span class="tech-badge">AI/ML</span>
+              <span class="tech-badge">API</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <button class="btn btn-view-project" onclick="openComingSoonModal()"
+                    aria-label="View Project 2" id="view-project-2">
+              <i class="fas fa-eye"></i> View Project
+            </button>
+          </div>
+        </div>
+
+        <!-- ─── PROJECT CARD 3 ───────────────────────────────────────
+             TO EDIT: Change title, description, tech stack, GitHub link, live demo
+             ─────────────────────────────────────────────────────────── -->
+        <div class="project-card reveal" id="project-card-3">
+          <div class="project-thumbnail" style="--thumb-color: #f59e0b;">
+            <i class="fas fa-database project-thumb-icon"></i>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Project Title Here</h3><!-- EDIT: Project name -->
+            <p class="project-desc">A short and engaging description of what this project does and the problem it solves. Keep it clear and concise.</p><!-- EDIT: Description -->
+            <div class="project-tech-stack">
+              <span class="tech-badge">SQL</span><!-- EDIT: Tech stack badges -->
+              <span class="tech-badge">Node.js</span>
+              <span class="tech-badge">React</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <button class="btn btn-view-project" onclick="openComingSoonModal()"
+                    aria-label="View Project 3" id="view-project-3">
+              <i class="fas fa-eye"></i> View Project
+            </button>
+          </div>
+        </div>
+
+        <!-- ─── PROJECT CARD 4 ───────────────────────────────────────
+             TO EDIT: Change title, description, tech stack, GitHub link, live demo
+             ─────────────────────────────────────────────────────────── -->
+        <div class="project-card reveal" id="project-card-4">
+          <div class="project-thumbnail" style="--thumb-color: #ec4899;">
+            <i class="fas fa-mobile-alt project-thumb-icon"></i>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Project Title Here</h3><!-- EDIT: Project name -->
+            <p class="project-desc">A short and engaging description of what this project does and the problem it solves. Keep it clear and concise.</p><!-- EDIT: Description -->
+            <div class="project-tech-stack">
+              <span class="tech-badge">HTML</span><!-- EDIT: Tech stack badges -->
+              <span class="tech-badge">CSS</span>
+              <span class="tech-badge">JS</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <button class="btn btn-view-project" onclick="openComingSoonModal()"
+                    aria-label="View Project 4" id="view-project-4">
+              <i class="fas fa-eye"></i> View Project
+            </button>
+          </div>
+        </div>
+
+      </div><!-- /.projects-grid -->
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CERTIFICATIONS SECTION
+       (Hidden on home scroll — accessible via nav only)
+       ============================================================ -->
+  <section id="certifications" class="section certifications-section cert-hidden">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Achievements</span>
+        <h2 class="section-title">Certifications</h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">My verified certificates and accomplishments.</p>
+      </div>
+
+      <div class="cert-gallery reveal">
+
+        <!-- ─── CERTIFICATE 1: Walmart Global Tech x Forage ─────────── -->
+        <div class="cert-card" id="cert-card-1">
+          <div class="cert-img-wrap">
+            <img src="assets/certificates/cert_walmart_forage.jpg"
+                 alt="Walmart Global Tech Advanced Software Engineering Job Simulation" />
+          </div>
+          <div class="cert-body">
+            <h4 class="cert-title">Advanced Software Engineering Job Simulation</h4>
+            <p class="cert-issuer"><i class="fas fa-award"></i> Walmart Global Tech × Forage</p>
+            <button class="btn btn-view-cert" id="view-cert-1"
+                    onclick="openCertModal(this)"
+                    data-img="assets/certificates/cert_walmart_forage.jpg"
+                    data-title="Advanced Software Engineering Job Simulation — Walmart Global Tech × Forage"
+                    aria-label="View Walmart Forage certificate">
+              <i class="fas fa-expand-alt"></i> View Certificate
+            </button>
+          </div>
+        </div>
+
+        <!-- ─── CERTIFICATE 2: ML XPLORE Workshop — SRKREC ──────────── -->
+        <div class="cert-card" id="cert-card-2">
+          <div class="cert-img-wrap">
+            <img src="assets/certificates/cert_mlxplore.jpg"
+                 alt="ML XPLORE 2-Day Hands-on Workshop" />
+          </div>
+          <div class="cert-body">
+            <h4 class="cert-title">ML XPLORE — Hands-on Machine Learning Workshop</h4>
+            <p class="cert-issuer"><i class="fas fa-award"></i> SRKR Engineering College (ACE, Dept. of CSE)</p>
+            <button class="btn btn-view-cert" id="view-cert-2"
+                    onclick="openCertModal(this)"
+                    data-img="assets/certificates/cert_mlxplore.jpg"
+                    data-title="ML XPLORE — Hands-on Machine Learning Workshop"
+                    aria-label="View ML XPLORE certificate">
+              <i class="fas fa-expand-alt"></i> View Certificate
+            </button>
+          </div>
+        </div>
+
+        <!-- ─── CERTIFICATE 3: Xcelerate — SRKREC ───────────────────── -->
+        <div class="cert-card" id="cert-card-3">
+          <div class="cert-img-wrap">
+            <img src="assets/certificates/cert_xcelerate.jpg"
+                 alt="Xcelerate Event — SRKR Engineering College" />
+          </div>
+          <div class="cert-body">
+            <h4 class="cert-title">Xcelerate — Technical Event Participation</h4>
+            <p class="cert-issuer"><i class="fas fa-award"></i> SRKR Engineering College (ACE, Dept. of CSE)</p>
+            <button class="btn btn-view-cert" id="view-cert-3"
+                    onclick="openCertModal(this)"
+                    data-img="assets/certificates/cert_xcelerate.jpg"
+                    data-title="Xcelerate — Technical Event Participation"
+                    aria-label="View Xcelerate certificate">
+              <i class="fas fa-expand-alt"></i> View Certificate
+            </button>
+          </div>
+        </div>
+
+        <!-- ─── CERTIFICATE 4: Cambridge Interchange Level 3 ─────────── -->
+        <div class="cert-card" id="cert-card-4">
+          <div class="cert-img-wrap">
+            <img src="assets/certificates/cert_cambridge.jpg"
+                 alt="Cambridge Interchange Level 3 Certificate" />
+          </div>
+          <div class="cert-body">
+            <h4 class="cert-title">Interchange Level 3 — English Proficiency</h4>
+            <p class="cert-issuer"><i class="fas fa-award"></i> Cambridge University Press &amp; Assessment</p>
+            <button class="btn btn-view-cert" id="view-cert-4"
+                    onclick="openCertModal(this)"
+                    data-img="assets/certificates/cert_cambridge.jpg"
+                    data-title="Cambridge Interchange Level 3 — English Proficiency"
+                    aria-label="View Cambridge certificate">
+              <i class="fas fa-expand-alt"></i> View Certificate
+            </button>
+          </div>
+        </div>
+
+      </div><!-- /.cert-gallery -->
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT SECTION
+       ============================================================ -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Let's Connect</span>
+        <h2 class="section-title">Contact Me</h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">Feel free to reach out for collaboration, opportunities, or just a chat!</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Contact Info Cards -->
+        <div class="contact-info-col reveal">
+          <div class="contact-card">
+            <div class="contact-icon-wrap" style="--icon-color: #6c63ff;">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-label">Email</span>
+              <a href="mailto:kalabattulaprasanth@gmail.com" class="contact-value" id="contact-email">
+                kalabattulaprasanth@gmail.com
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon-wrap" style="--icon-color: #10b981;">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-label">Phone</span>
+              <a href="tel:+918639676429" class="contact-value" id="contact-phone">
+                +91 8639676429
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon-wrap" style="--icon-color: #f59e0b;">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-label">Location</span>
+              <span class="contact-value" id="contact-location">Bhimavaram, Andhra Pradesh, India</span>
+            </div>
+          </div>
+
+          <!-- Social Links -->
+          <div class="contact-socials">
+            <a href="https://github.com/Suryaprasanthk" target="_blank" rel="noopener noreferrer"
+               class="contact-social-btn" id="contact-github" aria-label="GitHub">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/surya-prasanth-kalabattula-416167338" target="_blank" rel="noopener noreferrer"
+               class="contact-social-btn" id="contact-linkedin" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i> LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-col reveal">
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="form-name">Your Name</label>
+              <input type="text" id="form-name" name="name" placeholder="John Doe" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="form-email">Your Email</label>
+              <input type="email" id="form-email" name="email" placeholder="john@example.com" required autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="form-subject">Subject</label>
+              <input type="text" id="form-subject" name="subject" placeholder="Let's work together!" />
+            </div>
+            <div class="form-group">
+              <label for="form-message">Message</label>
+              <textarea id="form-message" name="message" rows="5" placeholder="Tell me about your project or inquiry..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="form-submit-btn">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+            <p class="form-note" id="form-status-msg"></p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer" id="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span class="footer-logo"><span class="logo-bracket">&lt;</span>SP<span class="logo-bracket">/&gt;</span></span>
+        <p class="footer-tagline">Building the future, one line of code at a time.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-socials">
+        <a href="https://github.com/Suryaprasanthk" target="_blank" rel="noopener noreferrer" aria-label="GitHub" id="footer-github"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/surya-prasanth-kalabattula-416167338" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" id="footer-linkedin"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:kalabattulaprasanth@gmail.com" aria-label="Email" id="footer-email"><i class="fas fa-envelope"></i></a>
+      </div>
+      <p class="footer-copy">
+        &copy; <span id="footer-year"></span> K. Surya Prasanth. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       MODALS
+       ============================================================ -->
+
+  <!-- Coming Soon Modal (Projects) -->
+  <div class="modal-overlay" id="coming-soon-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title-cs">
+    <div class="modal-box coming-soon-box">
+      <button class="modal-close" onclick="closeModal('coming-soon-modal')" aria-label="Close modal">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="coming-soon-icon">🚀</div>
+      <h3 id="modal-title-cs" class="coming-soon-title">Coming Soon</h3>
+      <p class="coming-soon-text">
+        "This project will be added soon. Stay tuned!"
+      </p>
+      <div class="coming-soon-divider"></div>
+      <p class="coming-soon-hint">
+        In the meantime, you can check out my
+        <a href="https://github.com/Suryaprasanthk" target="_blank" rel="noopener noreferrer">GitHub</a>
+        for more details.
+      </p>
+      <button class="btn btn-primary" onclick="closeModal('coming-soon-modal')" id="modal-close-btn">
+        Got it!
+      </button>
+    </div>
+  </div>
+
+  <!-- Certificate Viewer Modal -->
+  <div class="modal-overlay" id="cert-modal" role="dialog" aria-modal="true" aria-labelledby="cert-modal-title">
+    <div class="modal-box cert-modal-box">
+      <button class="modal-close" onclick="closeModal('cert-modal')" aria-label="Close certificate viewer">
+        <i class="fas fa-times"></i>
+      </button>
+      <h3 id="cert-modal-title" class="cert-modal-title">Certificate</h3>
+      <div class="cert-modal-img-wrap">
+        <!-- REPLACE with actual certificate image once available -->
+        <div class="cert-modal-placeholder">
+          <i class="fas fa-certificate"></i>
+          <p>Certificate image will appear here</p>
+        </div>
+        <img id="cert-modal-img" src="" alt="Certificate" class="cert-modal-img" style="display:none;" />
+      </div>
+      <a id="cert-download-btn" href="#" download class="btn btn-primary" style="display:none;">
+        <i class="fas fa-download"></i> Download
+      </a>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       BACK TO TOP BUTTON
+       ============================================================ -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Main JS -->
+  <script src="script.js"></script>
+</body>
+</html>
