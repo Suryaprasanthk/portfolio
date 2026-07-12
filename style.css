@@ -1314,6 +1314,8 @@ a.contact-value:hover { color: var(--accent-primary); }
 
 .footer-socials {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 0.75rem;
 }
 .footer-socials a {
@@ -1330,11 +1332,19 @@ a.contact-value:hover { color: var(--accent-primary); }
   transition: var(--transition);
 }
 .footer-socials a:hover {
-  background: var(--accent-primary);
   color: #fff;
-  border-color: var(--accent-primary);
   transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
 }
+/* Platform-specific hover colors */
+#footer-github:hover    { background: #24292e; border-color: #24292e; }
+#footer-linkedin:hover  { background: #0a66c2; border-color: #0a66c2; }
+#footer-email:hover     { background: var(--accent-primary); border-color: var(--accent-primary); }
+#footer-instagram:hover { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); border-color: #e1306c; }
+#footer-facebook:hover  { background: #1877f2; border-color: #1877f2; }
+#footer-discord:hover   { background: #5865f2; border-color: #5865f2; }
+#footer-twitter:hover   { background: #000000; border-color: #000000; }
+#footer-youtube:hover   { background: #ff0000; border-color: #ff0000; }
 
 .footer-copy {
   font-size: 0.8rem;
