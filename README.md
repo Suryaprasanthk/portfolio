@@ -1,2 +1,0 @@
-# portfolio
-about my self 
